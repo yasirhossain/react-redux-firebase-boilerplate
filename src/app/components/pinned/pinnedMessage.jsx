@@ -16,17 +16,17 @@ class PinnedMessage extends Component {
 
   render() {
     return (
-      <div key={`${this.props.id}-${this.props.type}`} className={`${styles['pinned-message']} ${(this.state.viewable && this.props.viewable) ? '' : styles['hide']}`}>
-        <div className={styles['avatar']}>
+      <div key={`${this.props.id}-${this.props.type}`} className={`${'pinned-message'} ${(this.state.viewable && this.props.viewable) ? '' : 'hide'}`}>
+        <div className={'avatar'}>
           <img src={this.props.avatar} />
         </div>
-        <div className={styles['body']}>
+        <div className={'body'}>
           <div>
-            <div className={styles['user-name']}>{this.props.name}</div>
-            <div className={styles['copy']}>{this.props.message}</div>
+            <div className={'user-name'}>{this.props.name}</div>
+            <div className={'copy'}>{this.props.message}</div>
           </div>
         </div>
-        <div className={styles['actions']}>
+        <div className={'actions'}>
           <FontAwesome name='times' onClick={this.hideMessage} />
         </div>
       </div>

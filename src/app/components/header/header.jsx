@@ -32,7 +32,7 @@ export function Header(props) {
   };
 
   const renderUserLinks = (
-    <div className={styles['login-container']}>
+    <div className={'login-container'}>
       <Button
         aria-owns={props.app.open ? 'simple-menu' : null}
         aria-haspopup="true"
@@ -52,25 +52,25 @@ export function Header(props) {
   );
 
   const renderGuestLinks = (
-    <div className={styles['login-container']}>
+    <div className={'login-container'}>
       <button onClick={onLogin.bind(this)}>Login</button>
       <button onClick={onSignup.bind(this)}>Sign Up</button>
     </div>
   );
 
   return (
-    <header className={styles.header}>
-      <div className={styles['logo-container']}>
+    <header className={'header'}>
+      <div className={'logo-container'}>
         <Link to="/" >
-          <div className={styles['logo']} style={{background: `transparent url("${streamDummyData.avatars.default}") center no-repeat`, backgroundSize: 'contain'}}></div>
-          <span className={styles['title']}></span>
+          <div className={'logo'} style={{background: `transparent url("${streamDummyData.avatars.default}") center no-repeat`, backgroundSize: 'contain'}}></div>
+          <span className={'title'}></span>
         </Link>
       </div>
-      <div className={styles.content}>
-        <div className={styles.logo}></div>
+      <div className={'content'}>
+        <div className={'logo'}></div>
         { props.user.isAuthenticated ? renderUserLinks : renderGuestLinks }
       </div>
-      <div className={styles['dialog-container']}>
+      <div className={'dialog-container'}>
         <SignupDialog
           dispatch={props.dispatch}
           user={props.user}

@@ -138,20 +138,20 @@ export class ChatInput extends Component {
 
   render() {
     return (
-      <div className={`${styles['chat-input']} ${(this.props.replyActive ? styles['reply-active'] : '')}`}>
-        <div className={styles['reply-message-container']}>
-          <div className={styles['name']}>Reply to {this.props.replyMessage.chatName}</div>
-          <div className={styles['body']}>{this.props.replyMessage.chatMessage}</div>
-          <div className={styles['actions']}>
+      <div className={`${'chat-input'} ${(this.props.replyActive ? 'reply-active' : '')}`}>
+        <div className={'reply-message-container'}>
+          <div className={'name'}>Reply to {this.props.replyMessage.chatName}</div>
+          <div className={'body'}>{this.props.replyMessage.chatMessage}</div>
+          <div className={'actions'}>
             { this.props.user.isAdmin ? <FontAwesome name='ban' onClick={this.onDelete.bind(this, this.props.replyMessage)} /> : null }
             <FontAwesome name='times' onClick={this.onReplyClose.bind(this)} />
           </div>
         </div>
-        <div className={styles['columns']}>
-          <div className={`${styles['user-panel']} ${(this.props.user.isAdmin ? styles['admin'] : null)}`} onClick={this.onChatName}>
-            <div className={styles['chat-avatar']}>
+        <div className={'columns'}>
+          <div className={`${'user-panel'} ${(this.props.user.isAdmin ? 'admin' : null)}`} onClick={this.onChatName}>
+            <div className={'chat-avatar'}>
               <div
-                className={styles['image']}
+                className={'image'}
                 style={{background: `transparent url("${this.assignedAvatar()}") center no-repeat`, backgroundSize: 'cover'}}
               ></div>
             </div>
@@ -159,7 +159,7 @@ export class ChatInput extends Component {
               { (this.props.user.isAuthenticated && this.props.user.user[0].chatName.length > 0) ? this.props.user.user[0].chatName : this.props.chatName }
             </label>
           </div>
-          <form id="frmChat" role="form" onSubmit={this.onChatSend} className={`${(this.props.viewable ? '' : styles['chat-hide'])}`}>
+          <form id="frmChat" role="form" onSubmit={this.onChatSend} className={`${(this.props.viewable ? '' : 'chat-hide')}`}>
             <input
               type="ChatMessage"
               className="form-control"
@@ -171,12 +171,12 @@ export class ChatInput extends Component {
             />
           </form>
            <Tooltip id="tooltip-icon" title="Characters Remaining" placement="top"
-             className={`${(this.props.viewable ? '' : styles['chat-hide'])}`}>
+             className={`${(this.props.viewable ? '' : 'chat-hide')}`}>
             <span
-              className={`${styles['char-limit']} ${(this.state.charRemaining < 0 ? styles['error'] : '')}`}
+              className={`${'char-limit'} ${(this.state.charRemaining < 0 ? 'error' : '')}`}
             >{this.state.charRemaining}</span>
           </Tooltip>
-          <SvgIcon onClick={this.onChatSend} className={styles['send-button']}>
+          <SvgIcon onClick={this.onChatSend} className={'send-button'}>
             <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
             <path d="M0 0h24v24H0z" fill="none"/>
           </SvgIcon>

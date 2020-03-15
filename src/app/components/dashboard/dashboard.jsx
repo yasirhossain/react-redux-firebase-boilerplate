@@ -35,32 +35,32 @@ class Dashboard extends Component {
 
   render() {
     const userLinks = (
-      <div className={styles['login-container']}>
+      <div className={'login-container'}>
         <button onClick={this.onLogout.bind(this)}>Logout</button>
       </div>
     );
 
     const guestLinks = (
-      <div className={styles['login-container']}>
+      <div className={'login-container'}>
         <button onClick={this.onLogin.bind(this)}>Login</button>
         <button onClick={this.onSignup.bind(this)}>Sign Up</button>
       </div>
     );
 
     return (
-      <div className={styles['dashboard']}>
-        <div className={globalStyles['container-w-header']}>
-          <div className={styles['dashboard-container']}>
+      <div className={'dashboard'}>
+        <div className={'container-w-header'}>
+          <div className={'dashboard-container'}>
             { this.props.user && this.props.user.isAdmin ? [
                 <div key='dashboard'>
-                  <div className={styles['card-container']}>
+                  <div className={'card-container'}>
                     <VideoSelector />
                     <CTASelector avatar={streamDummyData.avatars.default} />
                     <ChatControls />
                   </div>
                 </div>
               ] : [
-                <div key='no-results' className={styles['no-access']}>
+                <div key='no-results' className={'no-access'}>
                   <div>
                     <h1>You do not have access.</h1>
                   </div>

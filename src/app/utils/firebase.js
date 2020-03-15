@@ -6,7 +6,7 @@ export const firebaseAuth = firebaseApp.auth();
 export const firebaseDb = firebaseApp.database();
 
 const FireBaseTools = {
-  //database: firebaseApp.database(),
+  database: firebaseApp.database(),
 
   /**
    * Return an instance of a firebase auth provider based on the provider string.

@@ -24,8 +24,8 @@ export class Feedback extends Component {
 
   render() {
     return (
-      <div className={styles['feedback-card']}>
-        <div className={styles['actions']}>
+      <div className={'feedback-card'}>
+        <div className={'actions'}>
           <FontAwesome name='thumbs-up' onClick={this.castFeedback.bind(this, 'like')} />
           <FontAwesome name='thumbs-down' onClick={this.castFeedback.bind(this, 'dislike')} />
         </div>

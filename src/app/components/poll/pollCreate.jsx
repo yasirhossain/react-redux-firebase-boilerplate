@@ -96,7 +96,7 @@ export class PollCreate extends Component {
 
   render() {
     return (
-      <div className={styles['poll']}>
+      <div className={'poll'}>
         <h3>{this.state.title}</h3>
         <ol>
           {
@@ -134,10 +134,10 @@ export class PollCreate extends Component {
 
         {
           (!this.state.showPollQuestion || this.state.options.length > 1 || this.state.viewable) ? (
-            <div className={styles['button-container']}>
-              { this.state.showPollQuestion ? null : <Button onClick={this.pollReset} className={styles['default']}>Cancel</Button> }
-              { this.state.viewable ? <Button onClick={this.pollStop} className={styles['secondary']}>Stop Poll</Button> : null }
-              { this.state.options.length > 1 ? <Button onClick={() => this.pollSubmit(true)} className={styles['primary']}>Broadcast New Poll</Button> : null }
+            <div className={'button-container'}>
+              { this.state.showPollQuestion ? null : <Button onClick={this.pollReset} className={'default'}>Cancel</Button> }
+              { this.state.viewable ? <Button onClick={this.pollStop} className={'secondary'}>Stop Poll</Button> : null }
+              { this.state.options.length > 1 ? <Button onClick={() => this.pollSubmit(true)} className={'primary'}>Broadcast New Poll</Button> : null }
             </div>
           ) : null
         }

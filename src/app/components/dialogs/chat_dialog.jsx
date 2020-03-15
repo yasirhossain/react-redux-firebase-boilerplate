@@ -19,10 +19,13 @@ import { toggleChatDialog, setTempUser } from '../../actions/live_actions';
 //import banner from '../../../assets/images/logo-2.jpg';
 
 export class ChatNameDialog extends Component {
-  state = {
-    chatName: '',
-    errors: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      chatName: '',
+      errors: [],
+    };
+  }
 
   handleChange = name => event => {
     this.setState({
@@ -75,8 +78,7 @@ export class ChatNameDialog extends Component {
   };
 
   render() {
-    const
-    DialogStyle = {
+    const DialogStyle = {
       padding: 0,
       display: 'flex',
     },
@@ -90,11 +92,11 @@ export class ChatNameDialog extends Component {
     return (
       <div>
         <Dialog open={this.props.showChatNameDialog} transition={Slide} onRequestClose={this.handleRequestClose}>
-          <DialogContent style={DialogStyle} className={styles.dialog}>
-            <div className={styles['banner-container']}>
+          <DialogContent style={DialogStyle} className={'dialog'}>
+            <div className={'banner-container'}>
               <div style={{background: `transparent url("") center no-repeat`, backgroundSize: 'cover'}}></div>
             </div>
-            <div className={styles['copy-container']}>
+            <div className={'copy-container'}>
               <h2>Become a Pluto Citizen</h2>
               <DialogContentText>
                 Choose a chat name and let your presence be known!
@@ -118,7 +120,7 @@ export class ChatNameDialog extends Component {
                   </Button>
                 </DialogActions>
               </form>
-              <div className={styles['errors']}>
+              <div className={'errors'}>
                 {
                   this.state.errors.map(error => (
                     <label key={error}>{ error }</label>

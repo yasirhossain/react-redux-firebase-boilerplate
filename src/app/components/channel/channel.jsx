@@ -81,18 +81,18 @@ export class Channel extends Component {
       <div>
         {
           channel ? (
-            <div className={styles['live-page'] + (this.state.stream ? ' ' + styles['live'] : '') + (this.props.live.showChat ? '' : ' ' + styles['hide-chat'])}>
-              <div className={styles['dialog-container']}>
+            <div className={'live-page' + (this.state.stream ? ' ' + 'live' : '') + (this.props.live.showChat ? '' : ' ' + 'hide-chat')}>
+              <div className={'dialog-container'}>
                 <ChatNameDialog
                   dispatch={this.props.dispatch}
                   avatar={this.props.live.tempUser.avatar}
                   showChatNameDialog={this.props.live.showChatNameDialog} />
               </div>
 
-              <div className={globalStyles['container']}>
-                <div className={styles['section-container']}>
+              <div className={'container'}>
+                <div className={'section-container'}>
                   <PinnedCTA />
-                  <div className={styles['video-container']}>
+                  <div className={'video-container'}>
                     <Player
                       playsInline={true}
                     >
@@ -120,9 +120,9 @@ export class Channel extends Component {
                   charLimit={streamDummyData.charLimit}
                   viewable={this.props.live.showChat}
                 />
-                <div className={styles['bg-container']}>
-                  <div className={styles['bg-overlay']}></div>
-                  <div className={styles['bg-banner']} style={{background: `transparent url("${channel.banner}") center no-repeat`, backgroundSize: 'cover'}}></div>
+                <div className={'bg-container'}>
+                  <div className={'bg-overlay'}></div>
+                  <div className={'bg-banner'} style={{background: `transparent url("${channel.banner}") center no-repeat`, backgroundSize: 'cover'}}></div>
                 </div>
               </div>
             </div>

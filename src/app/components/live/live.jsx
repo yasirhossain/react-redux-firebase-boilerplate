@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
-import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
+import { TwitterShareButton, ShareCounts, generateShareIcon } from 'react-share';
 import Countdown from 'react-countdown-now';
 
-import ChatNameDialog from '../dialogs/chat_dialog';
+//import ChatNameDialog from '../dialogs/chat_dialog';
 
 import { Player } from 'video-react';
 import HLSSource from '../videoPlayer/HLSSource';
@@ -124,26 +124,27 @@ export class Live extends Component {
   };
 
   render() {
-    const { TwitterShareButton } = ShareButtons,
-          campaignStartTime = moment(this.props.campaign.startTime).format('MMMM Do YYYY');
+    const campaignStartTime = moment(this.props.campaign.startTime).format('MMMM Do YYYY');
 
     return (
-      <div className={styles['live-page'] + (this.state.stream ? ' ' + styles['live'] : '') + (this.props.live.showChat ? '' : ' ' + styles['hide-chat'])}>
-        <div className={styles['dialog-container']}>
+      <div className={'live-page' + (this.state.stream ? ' ' + 'live' : '') + (this.props.live.showChat ? '' : ' ' + 'hide-chat')}>
+        <div className={'dialog-container'}>
+          {/*
           <ChatNameDialog
             dispatch={this.props.dispatch}
             avatar={this.props.live.tempUser.avatar}
             showChatNameDialog={this.props.live.showChatNameDialog} />
+          */}
         </div>
 
-        <div className={globalStyles['container']}>
-          <div className={styles['section-container']}>
+        <div className={'container'}>
+          <div className={'section-container'}>
             <PinnedCTA />
-            <div className={styles['copy-container']}>
-              <h1 className={styles['title']}>{this.props.campaign.title}</h1>
+            <div className={'copy-container'}>
+              <h1 className={'title'}>{this.props.campaign.title}</h1>
               <p>{this.props.campaign.description}</p>
               <time>{campaignStartTime}</time>
-              <div className={styles['countdown'] + (this.state.countdownViewable ? '' : ' '+ styles['hide'])}>
+              <div className={'countdown' + (this.state.countdownViewable ? '' : ' '+ 'hide')}>
                 <Countdown
                   daysInHours={true}
                   date={this.props.campaign.startTime}
@@ -151,16 +152,16 @@ export class Live extends Component {
                   onComplete={this.goLive}
                 />
               </div>
-              <div className={styles['action-container']}>
+              <div className={'action-container'}>
                 <TwitterShareButton
                   url={`https://whatson.pluto.tv${this.props.location.pathname}`}
                   title={`Chat with us LIVE on ${moment(this.props.campaign.startTime).format('MMMM Do YYYY @ h:mm a')} where we watch ${this.props.campaign.title} on @PlutoTV`}
-                  className={`${styles['primary']} ${styles['button']}`}>
+                  className={`${'primary'} ${'button'}`}>
                   <FontAwesome name='twitter' /> Share
                 </TwitterShareButton>
               </div>
             </div>
-            <div className={styles['video-container']}>
+            <div className={'video-container'}>
               <Player
                 playsInline={true}
               >
@@ -188,9 +189,9 @@ export class Live extends Component {
             charLimit={streamDummyData.charLimit}
             viewable={this.props.live.showChat}
           />
-          <div className={styles['bg-container']}>
-            <div className={styles['bg-overlay']}></div>
-            <div className={styles['bg-banner']} style={{background: `transparent url("//cf-whatson.pluto.tv/pluto-bg.jpg") center no-repeat`, backgroundSize: 'cover'}}></div>
+          <div className={'bg-container'}>
+            <div className={'bg-overlay'}></div>
+            <div className={'bg-banner'} style={{background: `transparent url("//cf-whatson.pluto.tv/pluto-bg.jpg") center no-repeat`, backgroundSize: 'cover'}}></div>
           </div>
         </div>
       </div>

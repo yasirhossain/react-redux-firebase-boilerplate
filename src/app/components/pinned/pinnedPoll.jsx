@@ -56,26 +56,26 @@ export class PinnedPoll extends Component {
 
       return (
         <li key={i} data-value={vote.label} onClick={this.castVote.bind(this, vote.label)}>
-          <label className={styles['title']}>{vote.label}</label>
-          <label className={styles['value']}>{voteValue}%</label>
-          <div className={styles['bar']} style={pollStyle}></div>
+          <label className={'title'}>{vote.label}</label>
+          <label className={'value'}>{voteValue}%</label>
+          <div className={'bar'} style={pollStyle}></div>
         </li>
       );
     });
 
     return (
-      <div key={`${this.props.id}-${this.props.type}`} className={`${styles['pinned-poll']} ${(this.state.viewable && this.props.viewable) ? '' : styles['hide']}`}>
-        <div className={styles['body']}>
-          <div className={styles['poll']}>
-            <div className={styles['title']}>{this.props.title}</div>
-            <div className={styles['pinned-poll-results']}>
-             <ul className={styles['list-unstyled']}>
+      <div key={`${this.props.id}-${this.props.type}`} className={`${'pinned-poll'} ${(this.state.viewable && this.props.viewable) ? '' : 'hide'}`}>
+        <div className={'body'}>
+          <div className={'poll'}>
+            <div className={'title'}>{this.props.title}</div>
+            <div className={'pinned-poll-results'}>
+             <ul className={'list-unstyled'}>
                 {pollOptionsList}
              </ul>
            </div>
           </div>
         </div>
-        <div className={styles['actions']}>
+        <div className={'actions'}>
           <FontAwesome name='times' onClick={this.hideMessage} />
         </div>
       </div>

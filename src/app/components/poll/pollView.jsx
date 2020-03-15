@@ -60,27 +60,27 @@ export class PollView extends Component {
 
   render() {
     return (
-      <div className={styles['poll']}>
+      <div className={'poll'}>
         { this.state.viewable ? [
             ( !this.state.voted ? [
               <div key={payload.createdAt} style={bgColor}>
-                <div className={styles['avatar']}>
+                <div className={'avatar'}>
                   <img src={payload.chatAvatar} />
                 </div>
-                <div className={styles['body']}>
-                  <div className={styles['user-name']}>{payload.chatName}</div>
-                  <div className={styles['copy']}>{payload.chatMessage}</div>
+                <div className={'body'}>
+                  <div className={'user-name'}>{payload.chatName}</div>
+                  <div className={'copy'}>{payload.chatMessage}</div>
                 </div>
-                <div className={styles['actions']}>
+                <div className={'actions'}>
                   <FontAwesome name='times' onClick={this.hideMessage} />
                 </div>
               </div>
              ] : [
                <div>
-                 <FontAwesome className={styles['close']} name='times' onClick={this.hidePoll} />
-                 <div className={styles['component-container']}>
+                 <FontAwesome className={'close'} name='times' onClick={this.hidePoll} />
+                 <div className={'component-container'}>
                   <h2>{this.state.pollData.title}</h2>
-                  <ul className={styles['list-unstyled']}>
+                  <ul className={'list-unstyled'}>
                     {
                       this.state.pollData.options.map((vote) => {
                         let pollStyle = {
@@ -92,9 +92,9 @@ export class PollView extends Component {
                         }
                         return (
                           <li key={vote.label} onClick={this.castVote.bind(this, vote)}>
-                            <label className={styles['title']}>{vote.label}</label>
-                            <label className={styles['value']}>{voteValue}%</label>
-                            <div className={styles['bar']} style={pollStyle}></div>
+                            <label className={'title'}>{vote.label}</label>
+                            <label className={'value'}>{voteValue}%</label>
+                            <div className={'bar'} style={pollStyle}></div>
                           </li>
                         )
                       })

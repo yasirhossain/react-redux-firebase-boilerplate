@@ -62,30 +62,30 @@ export class PromotedMessages extends Component {
 
   render() {
     return (
-      <div ref="promoted" className={`${styles['promoted-messages']} ${(this.state.viewable ? '' : styles['promoted-chat-hide'])}`}>
+      <div ref="promoted" className={`${'promoted-messages'} ${(this.state.viewable ? '' : 'promoted-chat-hide')}`}>
         <ReactCSSTransitionGroup
           component="ul"
           transitionName={{
-            enter: `${animations['promoted-message-enter']}`,
-            leave: `${animations['promoted-message-leave']}`
+            enter: `${'promoted-message-enter'}`,
+            leave: `${'promoted-message-leave'}`
           }}
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={0}>
-            <li key={this.state.promotedMessage.chatId} className={styles['chat-message']}>
-              <div className={styles['columns']}>
-                <div className={styles['chat-avatar']} onClick={this.avatarAction.bind(this)}>
+            <li key={this.state.promotedMessage.chatId} className={'chat-message'}>
+              <div className={'columns'}>
+                <div className={'chat-avatar'} onClick={this.avatarAction.bind(this)}>
                   <div
-                    className={styles['image']}
+                    className={'image'}
                     style={{background: `transparent url("${this.state.promotedMessage.chatAvatar}") center no-repeat`, backgroundSize: 'cover'}}
                   ></div>
                 </div>
-                <div className={styles['copy-container']} onClick={this.messageAction.bind(this, this.state.promotedMessage)}>
-                  <div className={styles['name']}>
+                <div className={'copy-container'} onClick={this.messageAction.bind(this, this.state.promotedMessage)}>
+                  <div className={'name'}>
                     <label>{this.state.promotedMessage.chatName}</label>
                     { this.state.promotedMessage.chatReplyName ? <label><span> replied to </span> {this.state.promotedMessage.chatReplyName}</label> : null }
                   </div>
-                  <div className={styles['body']}>
-                    { this.state.promotedMessage.chatReply ? <p className={styles['reply']}>-{this.state.promotedMessage.chatReply}</p> : null }
+                  <div className={'body'}>
+                    { this.state.promotedMessage.chatReply ? <p className={'reply'}>-{this.state.promotedMessage.chatReply}</p> : null }
                     <p>{this.state.promotedMessage.chatMessage}</p>
                   </div>
                 </div>

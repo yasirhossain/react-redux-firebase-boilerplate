@@ -48,7 +48,7 @@ class ChatControls extends Component {
           <CardContent>
             <FormGroup>
               <FormControlLabel
-                className={styles['label-switch']}
+                className={'label-switch'}
                 control={
                   <Switch
                     checked={this.state.viewable}

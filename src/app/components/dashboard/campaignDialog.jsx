@@ -137,11 +137,11 @@ export class CampaignDialogPage extends Component {
     return (
       <div>
         <Dialog open={this.props.showSignupDialog} transition={Slide} onRequestClose={this.handleRequestClose}>
-          <DialogContent style={DialogStyle} className={styles.dialog}>
-            <div className={styles['banner-container']}>
+          <DialogContent style={DialogStyle} className={'dialog'}>
+            <div className={'banner-container'}>
               <div style={{background: `transparent url("${banner}") center no-repeat`, backgroundSize: 'cover'}}></div>
             </div>
-            <div className={styles['copy-container']}>
+            <div className={'copy-container'}>
               <h2>Become a Pluto Citizen</h2>
               <DialogContentText>
                 Sign up with Pluto TV to recieve 100+ channels. Plus get reminders when we go live.
@@ -180,7 +180,7 @@ export class CampaignDialogPage extends Component {
                     <Checkbox
                       checked={this.state.disclamerChecked}
                       onChange={this.handleChecked('disclamerChecked')}
-                      className={styles['disclaimer']}
+                      className={'disclaimer'}
                       value="disclaimer"
                     />
                   }
@@ -195,7 +195,7 @@ export class CampaignDialogPage extends Component {
                   </Button>
                 </DialogActions>
               </form>
-              <div className={styles['errors']}>
+              <div className={'errors'}>
                 {
                   this.state.errors.map(error => (
                     <label key={error}>{ error }</label>

@@ -41,22 +41,22 @@ export class SignInForm extends Component {
   render() {
     const errors = this.state.errors;
     return (
-      <div className={styles['form']}>
+      <div className={'form'}>
         <form action="#" onSubmit={(e) => this.onSubmit(e)}>
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Email</label>
             <input type="email" ref="email" />
           </div>
 
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Password</label>
             <input type="password" ref="password" />
           </div>
 
-          <button type="submit" value="Sign Up" className={styles['submit-btn']}>Sign Up</button>
+          <button type="submit" value="Sign Up" className={'submit-btn'}>Sign Up</button>
         </form>
 
-        <div className={styles['errors']}>
+        <div className={'errors'}>
           {
             errors.map(error => (
               <label key={error}>{ error }</label>

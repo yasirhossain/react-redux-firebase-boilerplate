@@ -100,7 +100,7 @@ export class ChatMessages extends Component {
 
   render() {
     return (
-      <div ref="chat" className={`${styles['chat-container']} ${(this.props.viewable ? '' : styles['chat-hide'])}`}>
+      <div ref="chat" className={`${'chat-container'} ${(this.props.viewable ? '' : 'chat-hide')}`}>
         <PromotedMessages
           user={this.props.user}
           dispatch={this.props.dispatch}
@@ -109,27 +109,27 @@ export class ChatMessages extends Component {
         <ReactCSSTransitionGroup
           component="ul"
           transitionName={{
-            enter: `${styles['chat-message-enter']}`,
-            leave: `${styles['chat-message-leave']}`
+            enter: `${'chat-message-enter'}`,
+            leave: `${'chat-message-leave'}`
           }}
           transitionEnterTimeout={0}
           transitionLeaveTimeout={0}>
           {this.state.messages.map((message, i) => (
-            <li key={i} className={styles['chat-message'] + ((message.role !== undefined) ? ` ${styles[message.role]}` : '')}>
-              <div className={styles['columns']}>
-                <div className={styles['chat-avatar']} onClick={this.avatarAction.bind(this, message)}>
+            <li key={i} className={'chat-message' + ((message.role !== undefined) ? ` ${message.role}` : '')}>
+              <div className={'columns'}>
+                <div className={'chat-avatar'} onClick={this.avatarAction.bind(this, message)}>
                   <div
-                    className={styles['image']}
+                    className={'image'}
                     style={{background: `transparent url("${message.chatAvatar}") center no-repeat`, backgroundSize: 'cover'}}
                   ></div>
                 </div>
-                <div className={styles['copy-container']} onClick={this.messageAction.bind(this, message)}>
-                  <div className={styles['name']}>
+                <div className={'copy-container'} onClick={this.messageAction.bind(this, message)}>
+                  <div className={'name'}>
                     <label>{message.chatName}</label>
                     { message.chatReplyName ? <label><span> replied to </span> {message.chatReplyName}</label> : null }
                   </div>
-                  <div className={styles['body']}>
-                    { message.chatReply ? <p className={styles['reply']}>-{message.chatReply}</p> : null }
+                  <div className={'body'}>
+                    { message.chatReply ? <p className={'reply'}>-{message.chatReply}</p> : null }
                     <p>{message.chatMessage}</p>
                   </div>
                 </div>

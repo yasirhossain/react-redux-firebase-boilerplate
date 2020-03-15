@@ -40,13 +40,13 @@ class PinnedCTA extends Component {
           viewable = this.state.viewable;
 
     return (
-      <div className={styles['message']}>
+      <div className={'message'}>
         { payload ?
           <div>
             <ReactCSSTransitionGroup
               transitionName={{
-                enter: `${animations['message-enter']}`,
-                leave: `${animations['message-leave']}`
+                enter: `${'message-enter'}`,
+                leave: `${'message-leave'}`
               }}
               transitionEnterTimeout={0}
               transitionLeaveTimeout={0}

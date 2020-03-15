@@ -47,7 +47,7 @@ export class PinnedPoll extends Component {
           this.props.data.map((vote, index) => {
             return (
               <li key={`${index}-options`} onClick={castVote.bind(this, vote)}>
-                <label className={styles['title']}>{vote.label}</label>
+                <label className={'title'}>{vote.label}</label>
               </li>
             )
           })
@@ -58,8 +58,8 @@ export class PinnedPoll extends Component {
 
   renderPollResults() {
     return (
-      <div className={styles['pinned-poll-results']}>
-       <ul className={styles['list-unstyled']}>
+      <div className={'pinned-poll-results'}>
+       <ul className={'list-unstyled'}>
          {
            this.props.data.map((vote, index) => {
              let pollStyle = {
@@ -71,9 +71,9 @@ export class PinnedPoll extends Component {
              }
              return (
                <li key={`${index}-answers`}>
-                 <label className={styles['title']}>{vote.label}</label>
-                 <label className={styles['value']}>{voteValue}%</label>
-                 <div className={styles['bar']} style={pollStyle}></div>
+                 <label className={'title'}>{vote.label}</label>
+                 <label className={'value'}>{voteValue}%</label>
+                 <div className={'bar'} style={pollStyle}></div>
                </li>
              )
            })
@@ -85,8 +85,8 @@ export class PinnedPoll extends Component {
 
   render() {
     return (
-      <div className={styles['poll']}>
-        <div className={styles['title']}>{this.props.title}</div>
+      <div className={'poll'}>
+        <div className={'title'}>{this.props.title}</div>
         { !this.state.voted ? this.renderPollOptions() : this.renderPollResults() }
       </div>
     );

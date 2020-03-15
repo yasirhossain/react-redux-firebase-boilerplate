@@ -68,7 +68,7 @@ export class App extends Component {
               { name: 'twitter:image', content: "https://cf-whatson.pluto.tv/logo-1.jpg" },
             ]}
           />
-          <div className={styles.container}>
+          <div className={'container'}>
             {this.props.children}
           </div>
         </div>

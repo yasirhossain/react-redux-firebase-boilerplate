@@ -11,8 +11,8 @@ export class AppIndex extends Component {
 
   render() {
     return (
-      <div className={styles['home']} style={{background: `transparent url("${bg}") center no-repeat`}}>
-        <div className={styles['copy-container']}></div>
+      <div className={'home'} style={{background: `transparent url("${bg}") center no-repeat`}}>
+        <div className={'copy-container'}></div>
       </div>
     );
   }

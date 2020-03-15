@@ -67,7 +67,7 @@ class VideoInput extends Component {
 
   render() {
     return (
-      <div className={styles['video-selector']}>
+      <div className={'video-selector'}>
         <Card>
           <CardHeader
             title="Video Stream"
@@ -75,7 +75,7 @@ class VideoInput extends Component {
           />
           <CardContent>
             <Button
-              className={styles['dropdown']}
+              className={'dropdown'}
               aria-owns={this.state.open ? 'video-menu' : null}
               aria-haspopup="true"
               onClick={this.handleClick}>
@@ -95,10 +95,10 @@ class VideoInput extends Component {
               }
             </Menu>
           </CardContent>
-          <CardActions disableActionSpacing className={styles['button-container']}>
+          <CardActions disableActionSpacing className={'button-container'}>
             <FontAwesome name='chevron-down' onClick={this.handleExpandClick} />
-            <Button className={styles['secondary']} onClick={this.onBroadcastStop}>Stop Current</Button>
-            <Button className={styles['primary']} onClick={this.onBroadcastStart.bind(this, this.state.src)}>Broadcast</Button>
+            <Button className={'secondary'} onClick={this.onBroadcastStop}>Stop Current</Button>
+            <Button className={'primary'} onClick={this.onBroadcastStart.bind(this, this.state.src)}>Broadcast</Button>
           </CardActions>
           <Collapse in={this.state.expanded} transitionDuration="auto" unmountOnExit>
             <CardContent>

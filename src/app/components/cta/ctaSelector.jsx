@@ -86,7 +86,7 @@ export class CTASelector extends Component {
 
   render() {
     return (
-      <div className={styles['cta-container']}>
+      <div className={'cta-container'}>
         <Card>
           <CardHeader
             title="Call to Action"
@@ -94,7 +94,7 @@ export class CTASelector extends Component {
           />
           <CardContent>
             <Button
-              className={styles['dropdown']}
+              className={'dropdown'}
               aria-owns={this.state.open ? 'cta-menu' : null}
               aria-haspopup="true"
               onClick={this.handleClick}>
@@ -117,8 +117,8 @@ export class CTASelector extends Component {
             { this.state.title === 'Message' ? <PinnedCreate avatar={streamDummyData.avatars.default} /> : <PollCreate avatar={streamDummyData.avatars.default} /> }
           </CardContent>
           { this.state.viewable ?
-            <CardActions disableActionSpacing className={styles['button-container']}>
-              <Button className={styles['secondary']} onClick={this.onBroadcastStop}>Stop Current</Button>
+            <CardActions disableActionSpacing className={'button-container'}>
+              <Button className={'secondary'} onClick={this.onBroadcastStop}>Stop Current</Button>
             </CardActions> : null
           }
         </Card>

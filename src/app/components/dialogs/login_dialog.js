@@ -106,10 +106,10 @@ export class LoginDialog extends Component {
       <div>
         <Dialog open={this.props.showLoginDialog} transition={Slide} onRequestClose={this.handleRequestClose}>
           <DialogContent style={DialogStyle}>
-            <div className={styles['banner-container']}>
+            <div className={'banner-container'}>
               <div style={{background: `transparent url("${banner}") center no-repeat`, backgroundSize: 'cover'}}></div>
             </div>
-            <div className={styles['copy-container']}>
+            <div className={'copy-container'}>
               <h2>Login</h2>
                 <form onSubmit={(e) => this.onSubmit(e)}>
                   <TextField
@@ -140,7 +140,7 @@ export class LoginDialog extends Component {
                     </Button>
                   </DialogActions>
                 </form>
-                <div className={styles['errors']}>
+                <div className={'errors'}>
                   {
                     this.state.errors.map(error => (
                       <label key={error}>{ error }</label>

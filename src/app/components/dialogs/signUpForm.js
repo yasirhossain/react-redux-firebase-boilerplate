@@ -70,47 +70,47 @@ export class SignUpForm extends Component {
     const errors = this.state.errors;
     const image = this.state.filePreview;
     return (
-      <div className={styles['form']}>
+      <div className={'form'}>
         <form action="#" onSubmit={(e) => this.onSubmit(e)}>
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Name</label>
             <input type="name" ref="name" />
           </div>
 
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Email</label>
             <input type="email" ref="email" />
           </div>
 
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Password</label>
             <input type="password" ref="password" />
           </div>
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Re-Enter Password</label>
             <input type="password" ref="password2" />
           </div>
 
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Location</label>
             <input type="location" ref="location" />
           </div>
 
-          <div className={styles['form-group']}>
+          <div className={'form-group'}>
             <label>Avatar</label>
             <Dropzone onDrop={ this.onDrop } size={ 150 }>
               <div>
                 Add your Avatar Here
               </div>
             </Dropzone>
-            <div className={styles['preview']}>
+            <div className={'preview'}>
               <img src={image} />
             </div>
           </div>
-          <button type="submit" value="Sign Up" className={styles['submit-btn']}>Sign Up</button>
+          <button type="submit" value="Sign Up" className={'submit-btn'}>Sign Up</button>
         </form>
 
-        <div className={styles['errors']}>
+        <div className={'errors'}>
           {
             errors.map(error => (
               <label key={error}>{ error }</label>

@@ -51,7 +51,7 @@ export class Dialog extends Component {
         <Button onClick={this.handleClickOpen}>Slide in alert dialog</Button>
         <Dialog open={this.props.showSignupDialog || this.props.showLoginDialog} transition={Slide} onRequestClose={this.handleRequestClose}>
           <DialogContent style={DialogStyle}>
-            <div className={styles['banner-container']}>
+            <div className={'banner-container'}>
               <div style={{background: `transparent url("${banner}") center no-repeat`, backgroundSize: 'cover'}}></div>
             </div>
             {
