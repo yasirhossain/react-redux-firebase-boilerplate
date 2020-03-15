@@ -6,6 +6,7 @@ export const firebaseAuth = firebaseApp.auth();
 export const firebaseDb = firebaseApp.database();
 
 const FireBaseTools = {
+  //database: firebaseApp.database(),
 
   /**
    * Return an instance of a firebase auth provider based on the provider string.
@@ -147,6 +148,63 @@ const FireBaseTools = {
    * @returns {!firebase.database.Reference|firebase.database.Reference}
    */
     getDatabaseReference: path => firebaseDb.ref(path),
+
+    etMessage: (path) => firebaseDb.ref(path).limitToLast(1).once('value', snapshot => {
+      const message = snapshot.val();
+      return message;
+    }),
+
+    updateMessage: (path) => firebaseDb.ref(path).limitToLast(1).on('value', snapshot => {
+      const message = snapshot.val();
+      return message;
+    }),
+
+    deleteMessage: (id, path) => firebaseDb.ref(path).child(id).remove(),
+
+    sendMessage: (chatId, chatName, chatMessage, chatReplyName, chatReply, chatAvatar, role, path) => firebaseDb.ref(path)
+    .push({
+      chatId,
+      chatName,
+      chatMessage,
+      chatReplyName,
+      chatReply,
+      chatAvatar,
+      role,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
+
+    setVideo: (uid, role, video, path) => firebaseDb.ref(path)
+    .set({
+      uid,
+      role,
+      video,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
+
+    setPoll: (poll) => firebaseDb.ref('poll').set({
+      poll,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
+
+    setChatControls: (options) => firebaseDb.ref('chatControls').set({
+      options,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
+
+    setCTA: (options) => firebaseDb.ref('cta').set({
+      options,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
+
+    setPromoted: (options) => firebaseDb.ref('promoted').set({
+      options,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
+
+    sendPromoted: (options) => firebaseDb.ref('promoted').push({
+      options,
+      createdAt: firebase.database.ServerValue.TIMESTAMP
+    }),
 };
 
 export default FireBaseTools;
