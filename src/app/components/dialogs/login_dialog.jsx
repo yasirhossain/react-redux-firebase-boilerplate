@@ -16,7 +16,7 @@ import { toggleLogin } from '../../actions/home_actions';
 import { login } from '../../actions/user_actions';
 import { getUserState } from '../../reducers/user_reducer';
 
-import banner from '../../../assets/images/logo-2.jpg';
+//import banner from '../../../assets/images/logo-2.jpg';
 
 export class LoginDialog extends Component {
   constructor(props) {

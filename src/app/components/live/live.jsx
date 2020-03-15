@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 import { TwitterShareButton, ShareCounts, generateShareIcon } from 'react-share';
 import Countdown from 'react-countdown-now';
 
-//import ChatNameDialog from '../dialogs/chat_dialog';
+import ChatNameDialog from '../dialogs/chat_dialog';
 
 import { Player } from 'video-react';
 import HLSSource from '../videoPlayer/HLSSource';
@@ -16,7 +16,7 @@ import firebaseTools from '../../utils/firebase';
 import { getRandomInt } from '../../utils/helperFunctions';
 import cuid from 'cuid';
 
-// import Header from '../../../App/components/Header/Header';
+import Header from '../header/header';
 
 import PinnedCTA from '../pinned/pinnedCTA';
 import PollView from '../poll/pollView';

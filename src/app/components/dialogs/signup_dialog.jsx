@@ -8,7 +8,7 @@ import Dialog, {
   DialogContentText,
   DialogTitle,
 } from '@material-ui/core/Dialog';
-import { FormGroup, FormControlLabel } from '@material-ui/core/FormControls';
+import { FormGroup, FormControlLabel } from '@material-ui/core/FormControl';
 import Checkbox from '@material-ui/core/Checkbox';
 import Slide from '@material-ui/core/Slide';
 import { withStyles } from '@material-ui/styles';
@@ -17,7 +17,7 @@ import TextField from '@material-ui/core/TextField';
 import { toggleSignup } from '../../actions/home_actions';
 import { signup } from '../../actions/user_actions';
 
-import banner from '../../../assets/images/logo-2.jpg';
+//import banner from '../../assets/images/logo-2.jpg';
 
 export class SignupDialog extends Component {
   state = {

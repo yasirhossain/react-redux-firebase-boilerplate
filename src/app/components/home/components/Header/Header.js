@@ -8,12 +8,12 @@ import Menu, { MenuItem } from '@material-ui/core/Menu';
 
 import streamDummyData from '../../utils/streamDummyData';
 
-import SignupDialog from '../../../dialogs/pages/signup_dialog';
-import LoginDialog from '../../../dialogs/pages/login_dialog';
+import SignupDialog from '../dialogs/signup_dialog';
+import LoginDialog from '../dialogs/login_dialog';
 
-import { toggleLogin, toggleSignup, toggleHeaderMenu } from '../../../App/AppActions';
-import { logout } from '../../../User/UserActions';
-import { getAppState } from '../../../App/AppReducer';
+import { toggleLogin, toggleSignup, toggleHeaderMenu } from '../../actions/home_actions';
+import { logout } from '../../actions/user_actions';
+import { getAppState } from '../../reducers/home_reducer';
 
 export function Header(props) {
   const onLogin = () => props.dispatch(toggleLogin());

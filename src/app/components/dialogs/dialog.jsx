@@ -8,9 +8,9 @@ import Slide from '@material-ui/core/Slide';
 import { withStyles } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
 
-import SignupForm from '../components/SignupForm'
+import SignupForm from './signup_form'
 
-import { toggleSignup } from '../../App/AppActions';
+import { toggleSignup } from '../../actions/home_actions';
 
 import banner from '../../../assets/images/logo-2.jpg';
 

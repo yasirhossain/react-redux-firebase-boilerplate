@@ -10,6 +10,9 @@ import ChatControls from '../chat/chatControls';
 import { toggleChat } from '../../actions/live_actions';
 import { getLiveState } from '../../reducers/live_reducer';
 
+import { toggleLogin, toggleSignup } from '../../actions/home_actions'
+import { getLoginViewable, getSignupViewable } from '../../reducers/home_reducer';
+
 import { logout } from '../../actions/user_actions';
 import { getUser } from '../../reducers/user_reducer';
 
