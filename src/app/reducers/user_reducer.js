@@ -3,7 +3,7 @@ import {
   LOGIN_REQUEST, LOGIN_FAILURE, LOGIN_SUCCESS,
   REFRESH_REQUEST, REFRESH_SUCCESS, REFRESH_FAILURE, RESET_TOKEN,
   LOGOUT_USER, RESET_USER
-} from './UserActions';
+} from '../actions/user_actions';
 
 // Initial State
 const initialState = {

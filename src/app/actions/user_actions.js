@@ -1,12 +1,12 @@
 import axios from 'axios';
 import fetch from 'isomorphic-fetch';
-import Config from '../../../server/config';
-import setAuthorizationToken from '../../util/setAuthorizationToken';
+//import Config from '../../../server/config';
+import setAuthorizationToken from '../utils/setAuthorizationToken';
 import jwtDecode from 'jwt-decode';
 
 const API_URL = (typeof window === 'undefined' || process.env.NODE_ENV === 'test') ?
-  process.env.BASE_URL || (`http://localhost:${process.env.PORT || Config.port}/api`) :
-  '/api';
+  //process.env.BASE_URL || (`http://localhost:${process.env.PORT || Config.port}/api`) : '/api';
+  process.env.BASE_URL || (`http://localhost:${process.env.PORT}`) : '/api';
 
 // Export Constants
 export const SIGNUP_REQUEST = 'SIGNUP_REQUEST';

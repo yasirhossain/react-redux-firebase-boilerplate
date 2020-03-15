@@ -7,8 +7,8 @@ import VideoSelector from '../videoFeed/videoSelector';
 import CTASelector from '../cta/ctaSelector';
 import ChatControls from '../chat/chatControls';
 
-import { toggleChat } from '../live/liveActions';
-import { getLiveState } from '../live/liveReducer';
+import { toggleChat } from '../../actions/live_actions';
+import { getLiveState } from '../../reducers/live_reducer';
 
 //import { logout } from '../userActions/userActions';
 //import { getUser } from '../userActions/userReducer';

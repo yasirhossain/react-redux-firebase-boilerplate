@@ -1,6 +1,6 @@
 import {
   TOGGLE_ADD_CAMPAIGN,
-} from './DashboardActions';
+} from '../actions/dashboard_actions';
 
 // Initial State
 const initialState = {

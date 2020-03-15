@@ -1,12 +1,12 @@
 import cuid from 'cuid';
-import streamDummyData from '../../utils/streamDummyData';
-import { getRandomInt } from '../../utils/helperFunctions';
+import streamDummyData from '../utils/streamDummyData';
+import { getRandomInt } from '../utils/helperFunctions';
 
 import {
   SHOW_CHAT, TOGGLE_LIVE, TOGGLE_CHAT_DIALOG,
   REPLY_ACTIVE, REPLY_RESET,
   SET_TEMP_USER,
-} from './LiveActions';
+} from '../actions/live_actions';
 
 // Initial State
 const initialState = {
