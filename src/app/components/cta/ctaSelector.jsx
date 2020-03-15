@@ -14,9 +14,6 @@ import PollCreate from '../poll/pollCreate';
 
 import PinnedCTA from '../pinned/pinnedCTA';
 
-// Import Style
-import styles from './ctaSelector.css';
-
 export class CTASelector extends Component {
   constructor(props) {
     super(props);

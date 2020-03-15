@@ -1,0 +1,11 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=997452
+http://stitcher-staging3.pluto.tv:80/stitch/hls/channel/56b27a7badb45b1f50b91b0b/997452/playlist.m3u8?terminate=false&deviceId=session-9392012&deviceVersion=1&appVersion=1&deviceType=web&deviceMake=safari&sid=session-9392012&advertisingId=&deviceLat=0&deviceLon=0&deviceDNT=0&deviceModel=web&userId=
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1539795
+http://stitcher-staging3.pluto.tv:80/stitch/hls/channel/56b27a7badb45b1f50b91b0b/1539795/playlist.m3u8?terminate=false&deviceId=session-9392012&deviceVersion=1&appVersion=1&deviceType=web&deviceMake=safari&sid=session-9392012&advertisingId=&deviceLat=0&deviceLon=0&deviceDNT=0&deviceModel=web&userId=
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2142297
+http://stitcher-staging3.pluto.tv:80/stitch/hls/channel/56b27a7badb45b1f50b91b0b/2142297/playlist.m3u8?terminate=false&deviceId=session-9392012&deviceVersion=1&appVersion=1&deviceType=web&deviceMake=safari&sid=session-9392012&advertisingId=&deviceLat=0&deviceLon=0&deviceDNT=0&deviceModel=web&userId=
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3063648
+http://stitcher-staging3.pluto.tv:80/stitch/hls/channel/56b27a7badb45b1f50b91b0b/3063648/playlist.m3u8?terminate=false&deviceId=session-9392012&deviceVersion=1&appVersion=1&deviceType=web&deviceMake=safari&sid=session-9392012&advertisingId=&deviceLat=0&deviceLon=0&deviceDNT=0&deviceModel=web&userId=
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=572723
+http://stitcher-staging3.pluto.tv:80/stitch/hls/channel/56b27a7badb45b1f50b91b0b/572723/playlist.m3u8?terminate=false&deviceId=session-9392012&deviceVersion=1&appVersion=1&deviceType=web&deviceMake=safari&sid=session-9392012&advertisingId=&deviceLat=0&deviceLon=0&deviceDNT=0&deviceModel=web&userId=

@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Countdown from './react-countdown-now';
+import Countdown from 'react-countdown-now';
 import cuid from 'cuid';
-import firebaseTools from '../../../util/firebase';
+import firebaseTools from '../../utils/firebase';
 
-import GoogleAnalytics from './react-ga';
+import GoogleAnalytics from 'react-ga';
 import FontAwesome from 'react-fontawesome';
-import Tooltip from './material-ui/Tooltip';
-import SvgIcon from 'material-ui/SvgIcon';
+import Tooltip from '@material-ui/core/Tooltip';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
-import { logout } from '../../userActions/userActions';
-import { replyReset, toggleChatDialog  } from '../../Live/LiveActions';
-
-// Import Style
-import styles from './ChatInput.css';
+import { logout } from '../../actions/user_actions';
+import { replyReset, toggleChatDialog  } from '../../actions/live_actions';
 
 export class ChatInput extends Component {
   constructor(props) {

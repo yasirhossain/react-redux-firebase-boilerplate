@@ -1,39 +1,36 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
 import Countdown from 'react-countdown-now';
 
-import ChatNameDialog from '../../Dialog/pages/ChatNameDialog';
+import ChatNameDialog from '../dialogs/chat_dialog';
 
 import { Player } from 'video-react';
-import HLSSource from '../../VideoPlayer/HLSSource.js';
-import streamDummyData from '../../../util/streamDummyData';
-import firebaseTools from '../../../util/firebase';
-import { getRandomInt } from '../../../util/helperFunctions';
+import HLSSource from '../videoPlayer/HLSSource';
+import streamDummyData from '../../utils/streamDummyData';
+import firebaseTools from '../../utils/firebase';
+import { getRandomInt } from '../../utils/helperFunctions';
 import cuid from 'cuid';
 
 // import Header from '../../../App/components/Header/Header';
 
-import PinnedCTA from '../../Tools/Pinned/PinnedCTA';
-import PollView from '../../Tools/Poll/PollView';
+import PinnedCTA from '../pinned/pinnedCTA';
+import PollView from '../poll/pollView';
 
-import ChatInput from '../../Tools/Chat/ChatInput';
-import ChatMessages from '../../Tools/Chat/ChatMessages';
+import ChatInput from '../chat/chatInput';
+import ChatMessages from '../chat/chatMessages';
 
-import globalStyles from '../../App/App.css';
-import styles from './Live.css';
+import { toggleSignup } from '../../actions/home_actions';
+import { getLoginViewable, getSignupViewable } from '../../reducers/home_reducer';
 
-import { toggleSignup } from '../../App/AppActions';
-import { getLoginViewable, getSignupViewable } from '../../App/AppReducer';
+import { getUser } from '../../reducers/user_reducer';
 
-import { getUser } from '../../User/UserReducer';
-
-import { showChat, setTempUser } from '../../Live/LiveActions';
-import { getLiveState } from '../../Live/LiveReducer';
+import { showChat, setTempUser } from '../../actions/live_actions';
+import { getLiveState } from '../../reducers/live_reducer';
 
 export class Live extends Component {
   constructor(props) {

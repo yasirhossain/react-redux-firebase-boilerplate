@@ -17,8 +17,6 @@ import TextField from 'material-ui/TextField';
 import { toggleSignup } from '../../App/AppActions';
 import { signup } from '../../User/UserActions';
 
-import styles from './DialogPage.css';
-
 import banner from '../../../assets/images/logo-2.jpg';
 
 export class CampaignDialogPage extends Component {

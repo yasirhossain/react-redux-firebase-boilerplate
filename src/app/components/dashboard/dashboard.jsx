@@ -10,10 +10,8 @@ import ChatControls from '../chat/chatControls';
 import { toggleChat } from '../../actions/live_actions';
 import { getLiveState } from '../../reducers/live_reducer';
 
-//import { logout } from '../userActions/userActions';
-//import { getUser } from '../userActions/userReducer';
-
-import styles from './dashboard.css';
+import { logout } from '../../actions/user_actions';
+import { getUser } from '../../reducers/user_reducer';
 
 class Dashboard extends Component {
   constructor(props) {

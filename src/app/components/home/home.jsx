@@ -1,15 +1,12 @@
-import React, { Component } from './react';
-import PropTypes from './prop-types';
-import { connect } from './react-redux';
-
-// Import Style
-import styles from './home.css';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 // Import Components
-import Helmet from './react-helmet';
+import Helmet from 'react-helmet';
 import DevTools from '../dev_tools';
 
-import setAuthorizationToken from '../../util/setAuthorizationToken';
+import setAuthorizationToken from '../../utils/setAuthorizationToken';
 import jwtDecode from './jwt-decode';
 
 import { refreshUser, logout } from '../../actions/user_actions';

@@ -7,11 +7,6 @@ import firebaseTools from '../../utils/firebase';
 
 import PinnedMessage from './pinnedMessage';
 import PinnedPoll from './pinnedPoll';
-
-// Import Style
-import styles from './PinnedCTA.css';
-import animations from './PinnedAnimations.css';
-
 class PinnedCTA extends Component {
   constructor(props) {
     super(props);

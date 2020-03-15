@@ -11,8 +11,6 @@ import FontAwesome from 'react-fontawesome';
 import streamDummyData from '../../utils/streamDummyData.js';
 import firebaseTools from '../../utils/firebase';
 
-import styles from './ChatControls.css';
-
 class ChatControls extends Component {
   constructor(props) {
     super(props);

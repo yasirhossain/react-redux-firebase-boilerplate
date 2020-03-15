@@ -7,9 +7,6 @@ import Button from '@material-ui/core/Button';
 import cuid from 'cuid';
 import firebaseTools from '../../utils/firebase';
 
-// Import Style
-import styles from './PollCreate.css';
-
 export class PollCreate extends Component {
   constructor(props) {
     super(props);

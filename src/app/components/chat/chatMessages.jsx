@@ -5,17 +5,14 @@ import { browserHistory } from 'react-router';
 import ReactDOM from 'react-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import find from 'lodash/find';
-import pull from 'lodash/pull';
+import {find, pull} from 'lodash';
 
-import GoogleAnalytics from './react-ga';
-import firebaseTools from '../../../util/firebase';
+import GoogleAnalytics from 'react-ga';
+import firebaseTools from '../../utils/firebase';
 
 import PromotedMessages from './promotedMessages';
 
-import { replyActive } from '../../Live/LiveActions';
-
-import styles from './ChatMessages.css';
+import { replyActive } from '../../actions/live_actions';
 
 export class ChatMessages extends Component {
   constructor(props) {

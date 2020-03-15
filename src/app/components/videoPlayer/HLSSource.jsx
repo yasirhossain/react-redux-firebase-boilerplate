@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Hls from 'hls.js';
 
-import AdStitcher from '../../util/AdStitcher/AdStitcher.js';
+import AdStitcher from '../../utils/adStitcher/adStitcher';
 
 const propTypes = {
   src: PropTypes.string,

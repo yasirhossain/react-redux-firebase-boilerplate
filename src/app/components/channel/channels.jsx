@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
@@ -9,12 +9,12 @@ import Countdown from 'react-countdown-now';
 
 import ChatNameDialog from '../../Dialog/pages/ChatNameDialog';
 
-import { Player } from 'video-react';
-import HLSSource from '../../VideoPlayer/HLSSource.js';
+import { Player } from './video-react';
+import HLSSource from '../VideoPlayer/HLSSource.jsx';
 import streamDummyData from '../../../util/streamDummyData';
 import firebaseTools from '../../../util/firebase-tools';
 import { getRandomInt } from '../../../util/helperFunctions';
-import cuid from 'cuid';
+import cuid from './cuid';
 
 // import Header from '../../../App/components/Header/Header';
 
@@ -23,9 +23,6 @@ import PollView from '../../Tools/Poll/PollView';
 
 import ChatInput from '../../Tools/Chat/ChatInput';
 import ChatMessages from '../../Tools/Chat/ChatMessages';
-
-import globalStyles from '../../App/App.css';
-import styles from './Channel.css';
 
 import { toggleSignup } from '../../App/AppActions';
 import { getLoginViewable, getSignupViewable } from '../../App/AppReducer';

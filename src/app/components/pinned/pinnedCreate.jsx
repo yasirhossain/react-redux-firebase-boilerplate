@@ -5,9 +5,6 @@ import { Link } from 'react-router';
 import cuid from 'cuid';
 import firebaseTools from '../../utils/firebase';
 
-// Import Style
-import styles from './PinnedCreate.css';
-
 export class PinnedCreate extends Component {
   onChatSend = (event) => {
     event.preventDefault();

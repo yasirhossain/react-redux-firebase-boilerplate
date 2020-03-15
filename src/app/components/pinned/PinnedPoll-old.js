@@ -4,10 +4,7 @@ import { Link } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import FontAwesome from 'react-fontawesome';
 
-import firebaseTools from '../../../util/firebase';
-
-// Import Style
-import styles from './PinnedPoll.css';
+import firebaseTools from '../../utils/firebase';
 
 export class PinnedPoll extends Component {
   constructor(props) {

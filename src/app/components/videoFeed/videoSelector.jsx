@@ -8,8 +8,6 @@ import FontAwesome from 'react-fontawesome';
 import streamDummyData from '../../utils/streamDummyData.js';
 import firebaseTools from '../../utils/firebase';
 
-import styles from './VideoSelector.css';
-
 class VideoInput extends Component {
   constructor(props) {
     super(props);

@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
 
-// Import Style
-import styles from './PinnedMessage.css';
-
 class PinnedMessage extends Component {
   constructor(props) {
     super(props);

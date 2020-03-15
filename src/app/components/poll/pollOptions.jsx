@@ -6,9 +6,6 @@ import FontAwesome from 'react-fontawesome';
 
 import firebaseTools from '../../utils/firebase';
 
-// Import Style
-import styles from '../pinnedPoll/pinnedPoll.css';
-
 class PollOptions extends Component {
   constructor(props) {
     super(props);

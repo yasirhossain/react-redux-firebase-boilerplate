@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-import Button from 'material-ui/Button';
-import Menu, { MenuItem } from 'material-ui/Menu';
+import Button from '@material-ui/core/Button';
+import Menu, { MenuItem } from '@material-ui/core/Menu';
 
-import streamDummyData from '../../../../util/streamDummyData';
+import streamDummyData from '../../utils/streamDummyData';
 
 import SignupDialog from '../../../Dialog/pages/SignupDialog';
 import LoginDialog from '../../../Dialog/pages/LoginDialog';
@@ -14,9 +14,6 @@ import LoginDialog from '../../../Dialog/pages/LoginDialog';
 import { toggleLogin, toggleSignup, toggleHeaderMenu } from '../../../App/AppActions';
 import { logout } from '../../../User/UserActions';
 import { getAppState } from '../../../App/AppReducer';
-
-// Import Style
-import styles from './Header.css';
 
 export function Header(props) {
   const onLogin = () => props.dispatch(toggleLogin());

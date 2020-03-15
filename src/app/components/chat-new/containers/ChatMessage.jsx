@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { actions, constants } from 'app-webtech-core';
 import * as chatSelectors from '../selectors';
 import * as chatActions from '../actions';
-import { ChatMessageComponent } from '../components/ChatMessage';
+import { ChatMessageComponent } from './ChatMessage';
 
 const { GUIDE_LIST_ITEM_KIND } = constants.guide;
 

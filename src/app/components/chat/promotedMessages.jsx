@@ -7,12 +7,9 @@ import ReactDOM from 'react-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import GoogleAnalytics from 'react-ga';
-import firebaseTools from '../../../util/firebase';
+import firebaseTools from '../../utils/firebase';
 
-import { replyActive } from '../../Live/LiveActions';
-
-import styles from './PromotedMessages.css';
-import animations from './PromotedAnimations.css';
+import { replyActive } from '../../actions/live_actions';
 
 export class PromotedMessages extends Component {
   constructor(props) {

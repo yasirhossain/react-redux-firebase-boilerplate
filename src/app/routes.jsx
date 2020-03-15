@@ -9,6 +9,8 @@ import UserRegister from './components/user/register';
 import UserProfile from './components/user/profile';
 import ResetPassword from './components/user/reset_password';
 import Dashboard from './components/dashboard/dashboard';
+import Live from './components/live/live';
+
 import requireAuth from './utils/authenticated';
 
 export default (
@@ -21,6 +23,8 @@ export default (
         <Route path="/profile" component={UserProfile} onEnter={requireAuth} />
 
         <Route path="/dashboard" component={Dashboard} onEnter={requireAuth} />
+
+        <Route path="/live" component={Live} onEnter={requireAuth} />
     </Route>
 
 );

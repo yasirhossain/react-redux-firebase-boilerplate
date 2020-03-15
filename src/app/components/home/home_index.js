@@ -1,8 +1,6 @@
-import React, { Component } from './react';
-import PropTypes from './prop-types';
-import { connect } from './react-redux';
-
-import styles from './home.css';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import bg from '../../../../assets/images/bg_new_branding.jpg';
 

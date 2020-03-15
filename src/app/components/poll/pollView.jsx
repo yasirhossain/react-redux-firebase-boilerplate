@@ -7,9 +7,6 @@ import FontAwesome from 'react-fontawesome';
 
 import firebaseTools from '../../utils/firebase';
 
-// Import Style
-import styles from './PollView.css';
-
 export class PollView extends Component {
   constructor(props) {
     super(props);
