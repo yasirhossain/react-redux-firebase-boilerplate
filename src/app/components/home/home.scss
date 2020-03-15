@@ -64,18 +64,6 @@ button {
   background-size: cover !important;
 }
 
-.copy-container {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  display: flex;
-  flex-flow: column;
-  flex: 2 0 0;
-  color: #fff;
-}
-
 .copy-container h1 {
   font-size: 120px;
   text-shadow: 3px 3px 3px rgba(0,0,0,.2);
