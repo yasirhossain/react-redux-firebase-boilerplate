@@ -8,6 +8,7 @@
   top: 0;
   width: 25%;
   float: left;
+  background: #151414;
 }
 
 .chat-container > ul:after {
@@ -23,6 +24,7 @@
   overflow-y: auto;
   bottom: 60px;
   position: absolute;
+  padding: 0;
 }
 
 .chat-hide {
@@ -49,7 +51,7 @@
   list-style: none;
   background: rgba(0, 0, 0, 0.8);
   margin-bottom: 5px;
-  padding: 8px 20px;
+  padding: 0px 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
